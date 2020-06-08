@@ -2,7 +2,7 @@ class Calculater{
     constructor(previousOperandTextElement,currentOperandTextElement){
         this.previousOperandTextElement=previousOperandTextElement
         this.currentOperandTextElement=currentOperandTextElement
-        this.flag=0;
+        this.flag=0
         this.clear()
     }
     clear(){
@@ -18,7 +18,7 @@ class Calculater{
         if(number === '.' && this.currentOperand.includes('.')) return
         if(this.flag==1){
             number=-number
-            this.flag=0;
+            this.flag=0
         }
         this.currentOperand=this.currentOperand.toString() + number.toString()
     }
@@ -65,7 +65,7 @@ class Calculater{
             this.getDisplayNumber(this.currentOperand)
         if(this.operation != null){
             this.previousOperandTextElement.innerText=
-                `${this.previousOperand} ${this.operation}`
+                `${this.previousOperand} ${this.operation} ${this.currentOperand}`
         }
     }
 }
